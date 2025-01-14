@@ -2,7 +2,7 @@
   
 import java.text.DecimalFormat;
 import java.util.Scanner; 
-    public class Main{
+    public class Ch1Practice{
         public static void main(String[] args) {
             
                 // Declare a String variable called name.
