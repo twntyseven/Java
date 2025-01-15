@@ -1,9 +1,7 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
 public class Ch1Project {
     public static void main(String[] args) {
-
-
-
-// Create a new Java Repl.it and name it Java Project 1.  Write the following program.
 
 // The program should ask the user for the following data and store it in variables of the indicated data types:
 
@@ -23,9 +21,7 @@ public class Ch1Project {
 // The program should display the user's entered name followed by a tab and then both of the user's initials
 
 // It should then display the calculations it performed along with the results.
-// Any calculations which could result in decimal values should display 2 decimal places.
-
- 
+// Any calculations which could result in decimal values should display 2 decimal places/
 
 // Expected Output:
 
@@ -41,7 +37,37 @@ public class Ch1Project {
 // >>5 * 10 = 50
 // >>5 / 10 = .50
 
-// Once you are done, and you've tested your program so that runs and provides the correct output, submit the Repl.it link.
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.println("Enter your name:");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter your first initial:");
+        char fInitial = scanner.next().charAt(0);
+
+        System.out.println("Enter your last initial:");
+        char lInitial = scanner.next().charAt(0);
+
+        System.out.println("Enter a number:");
+        int num = scanner.nextInt();
+
+        System.out.println("Enter a different number:");
+        int num2 = scanner.nextInt();
+
+
+        int sum = num + num2;
+        int difference = num - num2;
+        int product = num * num2;
+        DecimalFormat df = new DecimalFormat("#.00"); 
+        String quotient = df.format(num / (double)num2);
+
+        System.out.println(name + " " + fInitial + lInitial);
+        System.out.println(num + " + " + num2 +" = " + sum);
+        System.out.println(num + " - " + num2 +" = " + difference);
+        System.out.println(num + " * " + num2 +" = " + product);
+        System.out.println(num + " / " + num2 +" = " + quotient);
+
     }
     
 }
