@@ -45,18 +45,6 @@ public class Ch3Poject {
         }
         
         System.out.println("Yay!");
-        
-
-
-
-
-
-        
-
-
-
-
-
     }
     
 }
