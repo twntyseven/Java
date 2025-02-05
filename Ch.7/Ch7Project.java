@@ -1,10 +1,9 @@
 public class Ch7Project {
 
-
     enum Slot{
         ORANGE,
         LEMON,
-        CHERRY
+        CHERRY;
     }
 
     private static Slot currentSlot;
@@ -13,22 +12,24 @@ public class Ch7Project {
         return "You rolled a " + currentSlot;
     }
 
-    public void setSlot(int value){
+    public static void setSlot(int value){
         currentSlot = Slot.values()[value];
 
     }
 
-    public Slot getSlot(){
+    public static Slot getSlot(){
         return currentSlot;
     }
 
     public static Slot spin(){
-        currentSlot = Slot.values()[(int)(Math.random() * 3) ];
-        return currentSlot;
+        Slot[] slot = Slot.values();
+        return slot[(int)(Math.random() * 3)];
     }
 
     public static void main(String[] args) {
-        spin();
+        Slot slot = Ch7Project.spin();
+
+        System.out.println(slot);
 
         System.out.println(currentSlot.toString());
 
